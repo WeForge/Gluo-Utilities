@@ -1,6 +1,5 @@
-MIT License
-
-Copyright (c) 2024 WeForge
+<h1 align="center">MIT License</h1>
+<h2 align="center">Copyright (c) 2024 WeForge</h2>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
