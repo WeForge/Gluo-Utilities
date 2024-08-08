@@ -24,7 +24,6 @@ const { ForgeDB } = require("@tryforge/forge.db")
         "AutoModerationConfiguration",
         "AutoModerationExecution"
     ],
-    "useInviteSystem": true,
     "prefixes": [
         "?"
     ],
