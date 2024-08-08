@@ -37,7 +37,9 @@ module.exports={
       }
     ]
   },
-  code: `
-  later 
-  `
+  code: `$c[response to the command]
+  $ephemeral
+  $author[Kipteam;$userAvatar[675316333780533268;2046;webp]]
+  $description[$displayName[$authorID], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered. Please be patient.]
+  ` // gonna add create the channel next
 }
