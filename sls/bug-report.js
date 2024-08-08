@@ -7,13 +7,7 @@ module.exports={
         "type": 3,
         "name": "description",
         "description": "describe the bug you've spotted",
-        "required": true,
-        "choices": [
-          {
-            "name": "low",
-            "value": "the bug isn't much serious and is UI related"
-          }
-        ]
+        "required": true
       },
       {
         "type": 3,
@@ -38,8 +32,9 @@ module.exports={
     ]
   },
   code: `$c[response to the command]
+  $defer
   $ephemeral
-  $author[Kipteam;$userAvatar[675316333780533268;2046;webp]]
+  $author[Kipteam;$userAvatar[675316333780533268;2048;webp]]
   $description[$displayName[$authorID], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered. Please be patient.]
   ` // gonna add create the channel next
 }
