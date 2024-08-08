@@ -35,6 +35,6 @@ module.exports={
   $defer
   $ephemeral
   $author[Kipteam;$userAvatar[675316333780533268;2048;webp]]
-  $description[$displayName[$authorID], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered. Please be patient.]
+  $description[$displayName[$authorID]], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered. Please be patient.]
   ` // gonna add create the channel next
 }
