@@ -97,7 +97,7 @@ const { ForgeDB } = require("@tryforge/forge.db")
 })
    
 // Load the commands
-   client.commands.load("cmd")
+   client.commands.load("cmds")
    client.applicationCommands.load("sls")
    
 // Your bot token
