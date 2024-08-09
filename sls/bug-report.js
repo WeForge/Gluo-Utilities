@@ -31,15 +31,15 @@ module.exports={
       }
     ]
   },
-  code: `
+  code: `$defer
   $c[====(V A R I A B L E S)====]
-  $setGuildVar[amountOfBugReportsMade;$sum[1;$getGuildVar[amountOfBugRepportsMade]];$guildID]` +
+  $setGuildVar[amountOfBugReportsMade;$sum[1;$getGuildVar[amountOfBugRepportsMade;$guildID]];$guildID]` +
   /* Creating report channel */
   `
-  $let[reportChannelIDCreatedByUser;$createChannel[$guildID;bug-$getGuildVar[amountOfBugReportsMade];GuildText;Please wait, devs will take sometime to respond;1271418909140062281]]` +
+  $let[reportChannelIDCreatedByUser;$createChannel[$guildID;bug-$getGuildVar[amountOfBugReportsMade;$guildID];GuildText;Please wait, devs will take sometime to respond;1271418909140062281]]` +
   /* Reply to the user after using the command */ 
   `
   $author[Kipteam;$userAvatar[675316333780533268;2048;webp]]
-  $description[$userDisplayName[$authorID], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered in <#$getGuildVar[$reportChannelCreatedByUser]>.]
+  $description[$userDisplayName[$authorID], thanks for reporting the bug, developers will soon contact you about more details on the bug you've encountered in <#$get[$reportChannelCreatedByUser]>.]
   `
 }
