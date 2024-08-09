@@ -40,7 +40,7 @@ module.exports={
   /* Reply to the user after using the command */ 
   `
   $author[Kipteam;$userAvatar[675316333780533268;2048;webp]]
-  $description[### Thank you, $userDisplayName[$authorID], for opening a ticket. 
-> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.`
+  $description[### Thank you, $userDisplayName[$authorID], for creating a report. 
+> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]`
   /* Pong in the created channel with info next */
 }
