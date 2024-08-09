@@ -4,6 +4,7 @@ module.exports={
     description: "See how fast my responses are."
   },
   code: `
-  🏓 - $round[$ping;2]ms
+  $ephemeral
+  I can respond to you in $round[$ping;2]ms.
   `
 }
