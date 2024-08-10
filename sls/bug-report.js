@@ -16,16 +16,16 @@ module.exports={
         "required": true,
         "choices": [
           {
-            "name": "low",
-            "value": "the bug doesn't really affects functionality"
+            "value": "low",
+            "name": "the bug doesn't really affects functionality"
           },
           {
-            "name": "medium",
-            "value": "the bug isn't much of a deal but can be a hassle if not fixed urgently"
+            "value": "medium",
+            "name": "the bug isn't much of a deal but can be a hassle if not fixed urgently"
           },
           {
-            "name": "high",
-            "value": "this bug needs immediate attention, it affects the functionality"
+            "value": "high",
+            "name": "this bug needs immediate attention, it affects the functionality"
           }
         ]
       }
