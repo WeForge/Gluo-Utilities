@@ -40,8 +40,8 @@ module.exports={
   /* reply on executing command */ `
   $author[Kipteam;$userAvatar[$get[a];2048;webp]]
   $description[### Thank you, $userDisplayName[$authorID], for creating a report.
-  > -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]`
-  /* sending embed to the report discussion channel */`
+  > -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]` +
+  /* sending embed to the report discussion channel */ `
   $sendMessage[$get[b];<@$authorID> $author[Kipteam;$get[a];2048;webp] $description[### Thanks for creating this bug report.
   > -# *Our developers* will contact you shortly. In the meantime, please give us **all the details** on the bug. You can also just provide answers to these questions:
   - How did you encounter this bug? Explain with steps.
