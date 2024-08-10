@@ -31,16 +31,23 @@ module.exports={
       }
     ]
   },
-  code: `$defer
-  $c[====(V A R I A B L E S)====]
-  $setGuildVar[a;$sum[$getGuildVar[a];1]]` +
-  /* Creating report channel */
-  `
-  $let[b;$createChannel[$guildID;bug-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]` +
-  /* Reply to the user after using the command */ 
-  `
-  $author[Kipteam;$userAvatar[675316333780533268;2048;webp]]
-  $description[### Thank you, $userDisplayName[$authorID], for creating a report. 
-> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]`
-  /* Pong in the created channel with info next */
+  code: `$defer` +
+  /* variables */ `
+  $setGuildVar[a;$sum[$getGuildVar[a];1]] $c[increment id]
+  $let[a;675316333780533268]` +
+  /* report discussion creation */ `
+  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]` +
+  /* reply on executing command */ `
+  $author[Kipteam;$userAvatar[$get[a];2048;webp]]
+  $description[### Thank you, $userDisplayName[$authorID], for creating a report.
+  > -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]`
+  /* sending embed to the report discussion channel */`
+  $sendMessage[$get[b];<@$authorID> $author[Kipteam;$get[a];2048;webp] $description[### Thanks for creating this bug report.
+  > -# *Our developers* will contact you shortly. In the meantime, please give us **all the details** on the bug. You can also just provide answers to these questions:
+  - How did you encounter this bug? Explain with steps.
+  - What is your screen's size?
+  - What browser do you use? Also provide it's version.
+  - What OS do you use? Provide it's version.
+  - Can you send screenshots, videos, etc.?
+  ];false]`
 }
