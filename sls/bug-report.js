@@ -53,6 +53,6 @@ module.exports={
   - Can you send screenshots, videos, etc.?];false]` +
   /* log part one */ `
   $sendMessage[1248555821353402449;New bug report is made!
-  $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]];false]
+  $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   `
 }
