@@ -36,7 +36,8 @@ module.exports={
   $setGuildVar[a;$sum[$getGuildVar[a];1]] $c[increment id]
   $let[a;675316333780533268]` +
   /* report discussion creation */ `
-  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]` +
+  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]
+  $addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory]` +
   /* reply on executing command */ `
   $author[Kipteam;$userAvatar[$get[a];2048;webp]]
   $description[### Thank you, $userDisplayName[$authorID], for creating a report.
@@ -49,6 +50,9 @@ module.exports={
   - What is your screen's size?
   - What browser do you use? Also provide it's version.
   - What OS do you use? Provide it's version.
-  - Can you send screenshots, videos, etc.?
-  ];false]`
+  - Can you send screenshots, videos, etc.?];false]` +
+  /* log part one */ `
+  $sendMessage[1248555821353402449;New bug report is made!
+  $title[$option[severity]] $description[$option[description]];false]
+  `
 }
