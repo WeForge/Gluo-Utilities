@@ -37,7 +37,7 @@ module.exports={
   $let[a;675316333780533268]` +
   /* report discussion creation */ `
   $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]
-  $addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory]` +
+  $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory]` +
   /* reply on executing command */ `
   $author[Kipteam;$userAvatar[$get[a];2048;webp]]
   $description[### Thank you, $userDisplayName[$authorID], for creating a report.
