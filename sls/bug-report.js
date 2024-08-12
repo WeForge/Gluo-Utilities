@@ -16,15 +16,15 @@ module.exports={
         "required": true,
         "choices": [
           {
-            "value": "low",
+            "value": "Low",
             "name": "the bug doesn't really affects functionality"
           },
           {
-            "value": "medium",
+            "value": "Medium",
             "name": "the bug isn't much of a deal but can be a hassle if not fixed urgently"
           },
           {
-            "value": "high",
+            "value": "High",
             "name": "this bug needs immediate attention, it affects the functionality"
           }
         ]
@@ -53,6 +53,6 @@ module.exports={
   - Can you send screenshots, videos, etc.?];false]` +
   /* log part one */ `
   $sendMessage[1248555821353402449;New bug report is made!
-  $title[$option[severity]] $description[$option[description]];false]
+  $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]];false]
   `
 }
