@@ -10,7 +10,7 @@ Report discussion creation|Completed
 App's cosmetics|Maximum is completed
 Interaction replies|Completed 
 Report discussion channel stuff|Maximum is completed
-Report discussion logs|Upcomimg
+Report discussion logs|Half work is left
 Polishing messages|Upcoming
 Bug hunting|Soon
 Optimisations|Soon
