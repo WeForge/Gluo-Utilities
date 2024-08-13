@@ -21,3 +21,11 @@ Bug hunting|Soon
 Helped with some incredible ideas and suggestions.
 </details>
 <details><summary>Clyders</summary>Helped in making the design of embeds.</details>
+<h2 align="center">Star history</h2>
+<a href="https://star-history.com/#WeForge/GluoManagementBot&Timeline">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=WeForge/GluoManagementBot&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=WeForge/GluoManagementBot&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=WeForge/GluoManagementBot&type=Timeline" />
+  </picture>
+</a>
