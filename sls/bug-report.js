@@ -57,11 +57,4 @@ $addButton[fixed;Bug is fixed;Primary;;false];false]` +
   $sendMessage[1248555821353402449;New bug report is made!
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   `
-}, /* third part of logs */
-module.exports = {
-  type: "interactionCreate",
-  code: `
-  $if[$customID==fixed;
-    $findChannel[query;true]
-  ]`
 }
