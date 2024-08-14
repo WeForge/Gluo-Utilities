@@ -42,7 +42,7 @@ module.exports={
   $author[Kipteam;$userAvatar[$get[a];2048;webp]]
   $description[### Thank you, $userDisplayName[$authorID], for creating a report.
   > -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.]` +
-  /* sending embed to the report discussion channel */ `
+  /* sending embed to the report discussion channel with log part two*/ `
   $sendMessage[$get[b];<@$authorID> $author[Kipteam;$userAvatar[$get[a];2048;webp]] $description[### Thanks for creating this bug report.
   > -# **Our developers** will contact you shortly. In the meantime, please give us **all the details** on the bug. You can also just provide answers to these questions:
   
@@ -50,9 +50,18 @@ module.exports={
   - What is your screen's size?
   - What browser do you use? Also provide it's version.
   - What OS do you use? Provide it's version.
-  - Can you send screenshots, videos, etc.?];false]` +
+  - Can you send screenshots, videos, etc.?]
+  $addActionRow
+$addButton[fixed;Bug is fixed;Primary;;false];false]` +
   /* log part one */ `
   $sendMessage[1248555821353402449;New bug report is made!
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   `
+}, /* third part of logs */
+module.exports = {
+  type: "interactionCreate",
+  code: `
+  $if[$customID==fixed;
+    $findChannel[query;true]
+  ]`
 }
