@@ -54,7 +54,10 @@ module.exports={
   $addActionRow
 $addButton[fixed;Bug is fixed;Primary;;false];false]` +
   /* log part one */ `
-  $sendMessage[1248555821353402449;New bug report is made!
+  $sendMessage[1248555821353402449;New bug report is made at https://discord.com/channels/$guildID/$channelID
+  $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]` +
+    /* log part 1.5 */ `
+  $sendMessage[1274302011554402305;New bug report is made!
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   `
 }
