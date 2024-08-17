@@ -37,6 +37,7 @@ module.exports={
   $let[a;675316333780533268]` +
   /* report discussion creation */ `
   $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]
+  $setGuildVar[r;$get[b]]
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory]` +
   /* reply on executing command */ `
   $author[Kipteam;$userAvatar[$get[a];2048;webp]]
@@ -61,7 +62,7 @@ $addButton[fixed;Bug is fixed;Primary;;false];false]` +
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   ` +
     /* setup for logs part three */ `
-  $setGlobalVar[rps-$getServerVar[a];$option[severity]]
-  $setGlobalVar[rpd-$getServerVar[a];$option[description]]
+  $setGlobalVar[rps-$getGuildVar[r];$option[severity]]
+  $setGlobalVar[rpd-$getGuildVar[r];$option[description]]
  `
 }
