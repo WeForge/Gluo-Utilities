@@ -36,7 +36,7 @@ module.exports={
   $setGuildVar[a;$sum[$getGuildVar[a];1]] $c[increment id]
   $let[a;675316333780533268]` +
   /* report discussion creation */ `
-  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;1271418909140062281]]
+  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;$getGuildVar[categoryID_in_which_reports_will_be_made]]]
   $setGuildVar[r;$get[b]]
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory]` +
   /* reply on executing command */ `
@@ -55,10 +55,10 @@ module.exports={
   $addActionRow
 $addButton[fixed;Bug is fixed;Primary;;false];false]` +
   /* log part one */ `
-  $sendMessage[1248555821353402449;New bug report is made at https://discord.com/channels/$guildID/$get[b]
+  $sendMessage[$getGlobalVar[channelID_of_management_server_log];New bug report is made at https://discord.com/channels/$guildID/$get[b]
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]` +
     /* log part 1.5 */ `
-  $sendMessage[1274302011554402305;New bug report is made!
+  $sendMessage[$getGlobalVar[channelID_of_public_log];New bug report is made!
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
   ` +
     /* setup for logs part three */ `
