@@ -59,5 +59,9 @@ $addButton[fixed;Bug is fixed;Primary;;false];false]` +
     /* log part 1.5 */ `
   $sendMessage[1274302011554402305;New bug report is made!
   $title[$option[severity] severity bug] $description[Description of bug:\n> $option[description]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]];false]
-  `
+  ` +
+    /* setup for logs part three */ `
+  $setGlobalVar[rps-$getServerVar[a];$option[severity]]
+  $setGlobalVar[rpd-$getServerVar[a];$option[description]]
+ `
 }
