@@ -3,4 +3,9 @@ $deleteChannels[$findChannel[query;true]]$sendMessage[$getGuildVar[channelID_of_
 $title[$getGlobalVar[rps-$getGuildVar[r;$guildID]] severity bug is fixed] 
 $description[Description of bug:\n> $cropText[$getGlobalVar[rpd-$getGuildVar[r;$guildID]];0;160;…]]
 $footer[Bug report closed by $username[$authorID];$userAvatar[$authorID]]
-;false]]`}
+;false]]
+
+
+
+$if[$customID==fix-$authorID-$guildID;
+$ephemeral hi;$ephemeral no u]`}
