@@ -35,7 +35,7 @@ module.exports={
 
   $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;$getGuildVar[categoryID_in_which_reports_will_be_made]]]
 
-$ephemeral ### Thank you, $userDisplayName[$authorID], for creating a report.\n> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait. 
+  $interactionReply[$ephemeral ### Thank you, $userDisplayName[$authorID], for creating a report.\n> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.] 
 
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
   $sendMessage[$get[b];<@$authorID> $author[Kipteam;$userAvatar[675316333780533268]] $description[### Thanks for creating this bug report.
