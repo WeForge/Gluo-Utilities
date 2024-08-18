@@ -51,6 +51,6 @@ $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://d
   $title[$option[severity] severity bug] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]]
   ;false]
   $setGuildVar[severity-$authorID-$get[b];$option[severity]]
-  $setGuildVar[description-$authorID-$get[b];option[description]]
+  $setGuildVar[description-$authorID-$get[b];$option[description]]
  `
 }
