@@ -58,7 +58,7 @@ $addButton[fixed;Bug is fixed;Primary;;false];false]` +
   $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
   $title[$option[severity] severity bug] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]]
   $addActionRow
-  $addButton[fixed-$authorID;Bug is fixed;Danger;;false]
+  $addButton[fixed-$authorID-$guildID;Bug is fixed;Danger;;false]
   ;false]` +
     /* log part 1.5
   $sendMessage[$getGlobalVar[channelID_of_public_log];New bug report is made!
