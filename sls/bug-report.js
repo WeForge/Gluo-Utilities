@@ -51,8 +51,8 @@ module.exports={
   $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
   $title[$option[severity] severity bug] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]]
   ;false]
-  $setGuildVar[severity-$authorID-$get[b];$option[severity]]
-  $setGuildVar[description-$authorID-$get[b];$option[description]]
+  $setGuildVar[severity-$get[b];$option[severity]]
+  $setGuildVar[description-$get[b];$option[description]]
   $setGuildVar[a;$sum[$getGuildVar[a];1]]
   `
 }
