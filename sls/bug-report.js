@@ -36,27 +36,27 @@ module.exports={
         "required": true,
         "choices": [
           {
-            "value": "web",
+            "value": "Web",
             "name": "The Gluo web app"
           },
           {
-            "value": "app",
+            "value": "App",
             "name": "The Gluo native app for andorid"
           },
           {
-            "value": "app-2",
+            "value": "App 2",
             "name": "The new Gluo app"
           },
           {
-            "value": "api-4",
+            "value": "Api-4",
             "name": "The older Gluo api"
           },
           {
-            "value": "api-5",
+            "value": "Api-5",
             "name": "The newer Gluo api"
           },
           {
-            "value":"unknown",
+            "value":"Unknown",
             "name":"i don't know what i'm doing :/"
           }
           ]
