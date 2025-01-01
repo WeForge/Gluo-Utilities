@@ -63,14 +63,9 @@ module.exports={
       }
     ]
   },
-  code: `
-
-  $let[b;$createChannel[$guildID;$option[category]-$option[severity]-$getGuildVar[a];GuildText;Bug reporter:$username[$authorID]\nSeverity:$option[severity];$getGuildVar[categoryID_in_which_reports_will_be_made]]]
-$let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]
- 
-
-  $interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.] 
-
+  code: `$let[b;$createChannel[$guildID;$option[category]-$option[severity]-$getGuildVar[a];GuildText;Bug: $option[description]\nBug reporter: $username[$authorID]\nSeverity: $option[severity]\nCategory: $option[category];$getGuildVar[categoryID_in_which_reports_will_be_made]]]
+  $let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]
+  $interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.]
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
   $sendMessage[$get[b];<@$authorID>
  $title[🐞 ¦ $option[category] Bug report initiated]
