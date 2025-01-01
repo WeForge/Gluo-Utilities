@@ -6,52 +6,91 @@ module.exports={
       {
         "type": 3,
         "name": "description",
-        "description": "describe the bug you've spotted",
+        "description": "Detailed description of the bug",
         "required": true
       },
       {
         "type": 3,
         "name": "severity",
-        "description": "tell us how severe the bug is",
+        "description": "Impact level of the bug",
         "required": true,
         "choices": [
           {
             "value": "High",
-            "name": "high: this bug needs immediate attention, it affects the functionality"
+            "name": "High: Critical functionality impaired"
           },
           {
             "value": "Medium",
-            "name": "medium: the bug isn't much of a deal but can be a hassle if not fixed urgently"
+            "name": "Medium: Moderate impact on user experience"
           },
           {
             "value": "Low",
-            "name": "low: the bug doesn't really affects functionality"
+            "name": "Low: Minimal disruption"
             } 
         ]
+      },
+      {
+        "type": 3,
+        "name": "category",
+        "description": "The Gluo project you want to make a report about.",
+        "required": true,
+        "choices": [
+          {
+            "value": "web",
+            "name": "The Gluo web app"
+          },
+          {
+            "value": "app",
+            "name": "The Gluo native app for andorid"
+          },
+          {
+            "value": "app-2",
+            "name": "The new Gluo app"
+          },
+          {
+            "value": "api-4",
+            "name": "The older Gluo api"
+          },
+          {
+            "value": "api-5",
+            "name": "The newer Gluo api"
+          },
+          {
+            "value":"unknown",
+            "name":"i don't know what i'm doing :/"
+          }
+          ]
       }
     ]
   },
   code: `
 
-  $let[b;$createChannel[$guildID;bug-$option[severity]-$getGuildVar[a];GuildText;Please wait, developers will take sometime to respond.;$getGuildVar[categoryID_in_which_reports_will_be_made]]]
+  $let[b;$createChannel[$guildID;$option[category]-$option[severity]-$getGuildVar[a];GuildText;Bug reporter:$username[$authorID]\nSeverity:$option[severity];$getGuildVar[categoryID_in_which_reports_will_be_made]]]
+$let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]
+ 
 
-  $interactionReply[$ephemeral ### Thank you, $userDisplayName[$authorID], for creating a report.\n> -# **Our developers** will be in contact with you shortly. In the meantime, please provide us with **additional details** on the bug in **<#$get[b]>** while you wait.] 
+  $interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.] 
 
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
-  $sendMessage[$get[b];<@$authorID> $author[Kipteam;$userAvatar[675316333780533268]] $description[### Thanks for creating this bug report.
-  > -# **Our developers** will contact you shortly. In the meantime, please give us **all the details** on the bug. You can also just provide answers to these questions:
-  
-  - How did you encounter this bug? Explain with steps.
-  - What is your screen's size?
-  - What browser do you use? Also provide it's version.
-  - What OS do you use? Provide it's version.
-  - Can you send screenshots, videos, etc.?]
+  $sendMessage[$get[b];<@$authorID>
+ $title[🐞 ¦ $option[category] Bug report initiated]
+ $description[### Bug report details
+> -# Please help us understand the issue by providing the following information:
+        
+        - Steps to reproduce the bug
+        - Screen resolution
+        - Browser and version
+        - Operating system and version
+        - Screenshots or screen recordings (if possible)
+      ]
+$color[$get[z]]
   $addActionRow
-  $addButton[fixed;Bug is fixed;Success;;false];false]
+  $addButton[fixed;Mark as resolved;Success;;false];false]
   $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
-  $title[$option[severity] severity bug] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $footer[Bug report created by $username[$authorID];$userAvatar[$authorID]]
-  ;false]
+  $title[$option[severity] severity bug has been reported] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $addField[Category:;$option[category];true] $addField[Bug report created by:;$username[$authorID];true] $color[$get[z]]  $timestamp]
+
   $setGuildVar[severity-$get[b];$option[severity]]
+  $setGuildVar[category-$get[b];$option[category]]
   $setGuildVar[description-$get[b];$option[description]]
   $setGuildVar[a;$sum[$getGuildVar[a];1]]
   `
