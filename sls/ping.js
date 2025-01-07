@@ -1,1 +1,1 @@
-module.exports={data:{name:"ping",description:"See how fast my responses are."},code:`$ephemeral I can respond to you in $round[$ping;2]ms.`}
+(function(){const _0x1a5b=['name','description','code','$ephemeral I can respond to you in $round[$ping;2]ms.'];const _0x5ae8=function(_0x3cfd,_0x2c42){return _0x1a5b[_0x3cfd-0x0];};module['exports']={'data':{[_0x5ae8(0x0)]:'ping',[_0x5ae8(0x1)]:'See how fast my responses are.'},[_0x5ae8(0x2)]:_0x5ae8(0x3)};})();
