@@ -67,7 +67,7 @@ module.exports={
   $let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]
   $interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.]
   $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
-  $sendMessage[$get[b];<@$authorID>
+  $let[pi;$sendMessage[$get[b];<@$authorID>
  $title[🐞 ¦ $option[category] Bug report initiated]
  $description[### Bug report details
 > -# Please help us understand the issue by providing the following information:
@@ -80,7 +80,8 @@ module.exports={
       ]
 $color[$get[z]]
   $addActionRow
-  $addButton[fixed;Mark as resolved;Success;;false];false]
+  $addButton[fixed;Mark as resolved;Success;;false];true]]
+  $!pinMessage[$get[b];$get[pi]]
   $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
   $title[$option[severity] severity bug has been reported] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $addField[Category:;$option[category];true] $addField[Bug report created by:;$username[$authorID];true] $color[$get[z]]  $timestamp]
 
