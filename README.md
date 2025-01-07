@@ -1,5 +1,6 @@
 <h1 align="center">GluoManagementBot</h1>
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/063fbb34d165f3be5847/maintainability)](https://codeclimate.com/github/WeForge/Gluo-Utilities/maintainability)
 > *A simple discord app built by [WeForge](https://github.com/WeForge) for managing bugs of [Gluo](https://gluo.xyz) using a modified version of [@tryforge/ForgeScript](https://github.com/Clyders/fogeskript).*
 <br>
 <h2 align="center">Task list and their progress</h2>
