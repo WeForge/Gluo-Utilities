@@ -63,10 +63,11 @@ module.exports={
       }
     ]
   },
-  code: `$let[b;$createChannel[$guildID;$option[category]-$option[severity]-$getGuildVar[a];GuildText;Bug: $option[description]\nBug reporter: $username[$authorID]\nSeverity: $option[severity]\nCategory: $option[category];$getGuildVar[categoryID_in_which_reports_will_be_made]]]
-  $let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]
-  $interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.]
-  $!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
+  code: `$let[b;$createChannel[$guildID;$option[category]-$option[severity]-$getGuildVar[a];GuildText;Bug: $option[description]\nBug reporter: $username[$authorID]\nSeverity: $option[severity]\nCategory: $option[category];$getGuildVar[categoryID_in_which_reports_will_be_made]]]` +// create report channel
+  `$let[z;$replaceText[$replaceText[$replaceText[$option[severity];High;#FF0000];Medium;#FFA500];Low;#32CD32]]` +// color based on priority
+  `$interactionReply[$ephemeral ### ✅ ¦ Bug report created\nYour bug report has been created in <#$get[b]>. Our development team will review it shortly.]` + // interaction reply
+  /* The main shit of report channel*/
+  `$!addChannelPerms[$get[b];$authorID;AddReactions;ViewChannel;SendMessages;EmbedLinks;AttachFiles;ReadMessageHistory] 
   $let[pi;$sendMessage[$get[b];<@$authorID>
  $title[🐞 ¦ $option[category] Bug report initiated]
  $description[### Bug report details
@@ -81,10 +82,11 @@ module.exports={
 $color[$get[z]]
   $addActionRow
   $addButton[fixed;Mark as resolved;Success;;false];true]]
-  $!pinMessage[$get[b];$get[pi]]
-  $sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
+  $!pinMessage[$get[b];$get[pi]]` +
+  // logs
+  `$sendMessage[$getGuildVar[channelID_of_logs];New bug report is made at https://discord.com/channels/$guildID/$get[b]
   $title[$option[severity] severity bug has been reported] $description[Description of bug:\n> $cropText[$option[description];0;160;…]] $addField[Category:;$option[category];true] $addField[Bug report created by:;$username[$authorID];true] $color[$get[z]]  $timestamp]
-
+  $c[Saving varz]
   $setGuildVar[severity-$get[b];$option[severity]]
   $setGuildVar[category-$get[b];$option[category]]
   $setGuildVar[description-$get[b];$option[description]]
