@@ -70,8 +70,7 @@ module.exports={
     "ja": "私がどれほど目を覚ましているのか興味がありますか？",
     "zh-TW": "好奇我醒了多久？自上次重新開始以來，這告訴您我的正常運行時間。",
     "ko": "내가 얼마나 깨어 있었는지 궁금해? "
-  },
-  "nsfw": false
+  }
   },
   code: `I've been up for $parseMS[$uptime], while my the machine I am hosted on, has been up for $parseMS[$osUptime].`
 }
