@@ -1,5 +1,5 @@
 require('dotenv').config({ path: '../.env' });
 const a = require('./client');
-await a.commands.load('../commands/legacy');
-await a.applicationCommands.load('../commands/app');
-await a.login(process.env.TOKEN);
+a.commands.load(path.resolve(__dirname, '../commands/legacy'));
+a.applicationCommands.load(path.resolve(__dirname, '../commands/app'));
+a.login(process.env.TOKEN);
