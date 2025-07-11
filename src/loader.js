@@ -1,5 +1,4 @@
-require('dotenv').config({ path: '../.env' });
-const a = require('./client');
-a.commands.load(path.resolve(__dirname, '../commands/legacy'));
-a.applicationCommands.load(path.resolve(__dirname, '../commands/app'));
-a.login(process.env.TOKEN);
+require('dotenv').config({ path: '../.env' }); const agg = require('./client');
+agg.commands.load('/commands/legacy');
+agg.applicationCommands.load('../commands/app');
+agg.login(process.env.TOKEN);
