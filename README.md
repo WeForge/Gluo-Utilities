@@ -7,17 +7,17 @@
 
 Feature|Progress
 -|-
-Utility|33%
-Dev utility|0%
+Utility|66%
+Dev utility|100%
 Cosmetics|0%
-Bug reports|0%
+Bug reports|75%
 <br>
 <h2 align="center">Credits</h2>
 
 - Kipteam
   - tips and improvements
-- Clyders
-  - cosmetics
+- Tryforge
+  - for the amazing package
 <h2 align="center">Star history</h2>
 <a href="https://star-history.com/#WeForge/GluoManagementBot&Timeline">
   <picture>
