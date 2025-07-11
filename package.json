@@ -3,10 +3,10 @@
   "version": "0.1.2",
   "description": "A Discord application built to handle bug reports for gluo.xyz",
   "main": "main.js",
-  "scripts": { "test": "pnpm i && node src/main.js","start": "node src/main.js" },
+  "scripts": { "test": "pnpm i && node src/main.js","start": "node src/loader.js" },
   "keywords": [ "forgescript", "gluo" ],
   "author": [ "aurea", "kipteam"],
   "license": "MIT",
   "packageManager": "pnpm@10.12.1",
-  "dependencies": { "lmdb": "^3.4.0", "@quoriel/db": "github:quoriel/db", "@tryforge/forgescript": "github:tryforge/forgescript#dev", "dotenv": "^16.0.0" }
+  "dependencies": { "sqlite3": "^5.1.7", "@tryforge/forge.db": "^2.1.0", "@tryforge/forgescript": "github:tryforge/forgescript#dev", "dotenv": "^16.0.0" }
 }
