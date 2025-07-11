@@ -9,7 +9,6 @@ Feature|Progress
 -|-
 Utility|66%
 Dev utility|100%
-Cosmetics|0%
 Bug reports|75%
 <br>
 <h2 align="center">Credits</h2>
