@@ -7,9 +7,10 @@
 
 Feature|Progress
 -|-
-Utility|66%
+Utility|100%
 Dev utility|100%
-Bug reports|75%
+Bug reports|100%
+Statistics|33%
 <br>
 <h2 align="center">Credits</h2>
 
@@ -17,6 +18,31 @@ Bug reports|75%
   - tips and improvements
 - Tryforge
   - for the amazing package
+<h2 align="center">Setting up</h2>
+
+1. Install [Node.js](https://nodejs.org/en/download)
+2. Install the packages using the following [npm](https://npmjs.com) command:
+    ```bash
+    npm i
+    ```
+3. Create a file named `.env` outside the `src` directory and it should look like:
+    ```dosini
+    your_mom=your discord bot token here
+    ```
+>[!CAUTION]
+> Never share this file to anyone! Keep it in a safe place.
+5. Start the bot by running the following command:
+    ```bash
+    npm start
+    ```
+6. Now, use the evaluation command: `.e` and run this:
+    ```yaml
+    the increment id: $setGuildVar[a;0] $getGuildVar[a]
+    the category id in which reports will be made: $setGuildVar[categoryID_in_which_reports_will_be_made;enter it here] $getGuildVar[categoryID_in_which_reports_will_be_made]
+    the channel id of logs: $setGuildVar[channelID_of_logs;] $getGuildVar[channelID_of_logs]
+    ```
+>[!IMPORTANT]
+> The evaluation part needs to be repeated everytime you want to use it in another guild!
 <h2 align="center">Star history</h2>
 <a href="https://star-history.com/#WeForge/GluoManagementBot&Timeline">
   <picture>
