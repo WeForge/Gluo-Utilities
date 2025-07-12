@@ -1,5 +1,0 @@
-I need a bot for the management discord (hosted) that has a /bug-report command which will prompt a modal asking for a quick/short explanation of the bug, then it will create a channel under a category I can specify. the channel will hold the name: `bug-{INCREMENTAL_ID}`, the user that ran the function should be added to the channel. then there should also be a log channel in which a message should be sent holding the short description, a link to the active channel and a button to mark it as solved (this button needs a role to be pressed). when a bug thread is solved it should close the channel and update the embed to clearly show it was solved.
-
-ideally there would also be some kind of similar feature for this discord. you would also be able to do /bug-report however it should still create the channel in the management server but there should be a portal in place that allows us in the management server to communicate with the person here. (it should also be appended to the log)
-
-possible?

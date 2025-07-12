@@ -1,1 +1,0 @@
-(function(){const _0x1f3c=['name','description','code','$ephemeralI\'ve been up since $parseMS[$uptime].'];const _0x2ab1=function(_0x3cd5,_0x2ac3){return _0x1f3c[_0x3cd5-0x0];};module['exports']={'data':{[_0x2ab1(0x0)]:'uptime',[_0x2ab1(0x1)]:'See how long have I been up since.'},[_0x2ab1(0x2)]:_0x2ab1(0x3)};})();

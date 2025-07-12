@@ -1,1 +1,12 @@
-{"name":"GluoManagementBot","version":"0.0.2","description":"A discord app built for managing the bug reports and other stuff in the gluo discord server.","main":"main.js","scripts":{"start":"node main.js"},"author":["Aurea","KipTeam"],"license":"MIT","devDependencies":{"@tryforge/forgescript":"github:Clyders/fogeskript#dev","sqlite3":"^5.1.7"},"dependencies":{"@tryforge/forge.db":"^2.0.4"}}
+{
+  "name": "Gluo Utilities",
+  "version": "0.1.2",
+  "description": "A Discord application built to handle bug reports for gluo.xyz",
+  "main": "main.js",
+  "scripts": { "test": "pnpm i && node src/main.js","start": "node src/loader.js" },
+  "keywords": [ "forgescript", "gluo" ],
+  "author": [ "aurea", "kipteam"],
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": { "sqlite3": "^5.1.7", "@tryforge/forge.db": "^2.1.0", "@tryforge/forgescript": "github:tryforge/forgescript#dev", "dotenv": "^16.0.0" }
+}
