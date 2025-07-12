@@ -1,4 +1,4 @@
-const{ForgeClient,LogPriority}=require("@tryforge/forgescript"),const{ForgeDB}=require("@tryforge/forge.db");
+const{ForgeClient,LogPriority}=require("@tryforge/forgescript");const{ForgeDB}=require("@tryforge/forge.db");
 const agg=new ForgeClient({
   intents:["GuildMessages"],
   events:["messageCreate","interactionCreate"],
