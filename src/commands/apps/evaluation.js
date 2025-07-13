@@ -12,7 +12,7 @@ module.exports={
       "name_localizations": {
         "id": "kode",
         "da": "kode",
-        "de": "Code",
+        "de": "code",
         "en-GB": "code",
         "en-US": "code",
         "es-ES": "código",
@@ -81,8 +81,8 @@ module.exports={
   ],
   "name_localizations": {
     "id": "evaluasi",
-    "da": "Evaluering",
-    "de": "Auswertung",
+    "da": "evaluering",
+    "de": "auswertung",
     "en-GB": "evaluation",
     "en-US": "evaluation",
     "es-ES": "evaluación",
@@ -90,10 +90,10 @@ module.exports={
     "fr": "évaluation",
     "hr": "procjena",
     "it": "valutazione",
-    "lt": "Vertinimas",
+    "lt": "vertinimas",
     "hu": "értékelés",
     "nl": "evaluatie",
-    "no": "Evaluering",
+    "no": "evaluering",
     "pl": "ocena",
     "pt-BR": "avaliação",
     "ro": "evaluare",
@@ -103,7 +103,7 @@ module.exports={
     "tr": "değerlendirme",
     "cs": "hodnocení",
     "el": "εκτίμηση",
-    "bg": "Оценка",
+    "bg": "оценка",
     "ru": "оценка",
     "uk": "оцінка",
     "hi": "मूल्यांकन",
@@ -151,4 +151,4 @@ module.exports={
   code: `$ephemeral
   $onlyForUsers[Sorry but only authorized personnel can use this command :/;976413539076026388;1177953362717704232;675316333780533268]
   $eval[$option[code]]`
-} 
+}
